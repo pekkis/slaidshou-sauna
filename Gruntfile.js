@@ -12,6 +12,8 @@ module.exports = function(grunt) {
             common: {
                 files: {
                     "web/app.css": [
+                        "node_modules/reveal.js/css/reveal.css",
+                        "node_modules/reveal.js/css/theme/default.css",
                         "app.less"
                     ]
                 }

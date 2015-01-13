@@ -23,7 +23,9 @@
     "jit-grunt": "^0.9.0",
     "jquery": "^2.1.3",
     "jquery-browserify": "^1.8.1",
+    "lodash": "^2.4.1",
     "react": "^0.12.2",
-    "reactify": "^0.17.1"
+    "reactify": "^0.17.1",
+    "reveal.js": "^2.6.2"
   }
 }
