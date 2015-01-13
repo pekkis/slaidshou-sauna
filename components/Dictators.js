@@ -34,7 +34,23 @@ var Dictators = React.createClass({
         var self = this;
         $.get('http://diktaattoriporssi.com/api/dictator').then(function(dictators) {
             self.setState({
-                dictators: Immutable.List(dictators)
+                'dictators': Immutable.List(dictators)
+                .filter(function(d) {
+                    return d.canonicalRanking;
+                })
+                .sort(function(a, b) {
+
+                    if (a.canonicalRanking && !b.canonicalRanking) {
+                        return -1;
+                    }
+
+                    if (b.canonicalRanking && !a.canonicalRanking) {
+                        return 1;
+                    }
+
+                    return (a.canonicalRanking < b.canonicalRanking) ? -1 : 1;
+                    
+                })
             });
         })
     }

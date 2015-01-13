@@ -9,7 +9,7 @@ var Dictator = React.createClass({
             <section>
             
             <h2>
-                {this.props.dictator.identity.displayName}
+                {this.props.dictator.canonicalRanking}. {this.props.dictator.identity.displayName}
             </h2>
 
             <Image src={this.props.dictator.imageUrl} version="card::x:50" />
